@@ -1,0 +1,13 @@
+p{
+    color:#404040;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    background-color: #eeeeee;
+    width: 100%;
+    border-top: 2px solid orangered;
+}
+

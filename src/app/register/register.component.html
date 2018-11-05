@@ -1,0 +1,115 @@
+<div class="col-md-8  offset-md-2">
+  <form [formGroup]="registerForm" ngSubmit="register()">
+    <div class="card">
+      <div class="card-header">Register</div>
+      <div class="card-body">
+        <div class="form-group row">
+          <label for="full_name" class="col-md-4 col-form-label text-md-right">First Name</label>
+          <div class="col-md-6">
+            <input type="text" id="first_name" class="form-control" name="first_name" formControlName="first_name"
+              [ngClass]="{ 'is-invalid': submitted && f.first_name.errors }">
+            <div *ngIf="submitted && f.first_name.errors" class="invalid-feedback d-block">
+              <div *ngIf="f.first_name.errors.required">First Name is required</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="full_name" class="col-md-4 col-form-label text-md-right">Last Name</label>
+          <div class="col-md-6">
+            <input type="text" id="last_name" class="form-control" name="last_name" formControlName="last_name"
+              [ngClass]="{ 'is-invalid': submitted && f.last_name.errors }">
+            <div *ngIf="submitted && f.last_name.errors" class="invalid-feedback d-block">
+              <div *ngIf="f.last_name.errors.required">Last Name is required</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="username" class="col-md-4 col-form-label text-md-right">Username</label>
+          <div class="col-md-6">
+            <input type="text" id="username" class="form-control" name="username" formControlName="username" [ngClass]="{ 'is-invalid': submitted && f.username.errors }">
+            <div *ngIf="submitted && f.username.errors" class="invalid-feedback d-block">
+              <div *ngIf="f.username.errors.required">Username is required</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
+          <div class="col-md-6">
+            <input type="email" id="email_address" class="form-control" name="email_address" formControlName="email_address"
+              [ngClass]="{ 'is-invalid': submitted && f.email_address.errors }">
+            <div *ngIf="submitted && f.email_address.errors" class="invalid-feedback d-block">
+              <div *ngIf="f.email_address.errors.required">Email address is required</div>
+              <div *ngIf="f.email_address.errors.email">Email must be a valid email address</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+          <div class="col-md-6">
+            <input type="password" id="password" class="form-control" name="password" formControlName="password"
+              [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback d-block">
+              <div *ngIf="f.password.errors.required">Password is required</div>
+              <div *ngIf="f.password.errors.email">Password must be at least 6 characters</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="form-group row">
+          <label for="cpassword" class="col-md-4 col-form-label text-md-right">Confirm Password</label>
+          <div class="col-md-6">
+            <input type="password" id="cpassword" class="form-control" name="cpassword" formControlName="cpassword"
+              [ngClass]="{ 'is-invalid': submitted && f.cpassword.errors }">
+            <div *ngIf="submitted && f.cpassword.errors" class="invalid-feedback d-block">
+              <div *ngIf="f.cpassword.errors.required">Password is required</div>
+            </div>
+          </div>
+        </div>-->
+        <div class="form-group row">
+          <label for="birthdate" class="col-md-4 col-form-label text-md-right">Birth Date</label>
+          <div class="col-md-6">
+            <input type="text" id="birthdate" class="form-control" name="birthdate" formControlName="birthdate"
+              [ngClass]="{ 'is-invalid': submitted && f.birthdate.errors }">
+            <div *ngIf="submitted && f.birthdate.errors" class="invalid-feedback d-block">
+              <div *ngIf="f.birthdate.errors.required">Birthdate is required</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="steam_id" class="col-md-4 col-form-label text-md-right">Steam ID</label>
+          <div class="col-md-6">
+            <input type="text" id="steam_id" class="form-control" name="steam_id" formControlName="steam_id" [ngClass]="{ 'is-invalid': submitted && f.steam_id.errors }">
+            <div *ngIf="submitted && f.steam_id.errors" class="invalid-feedback d-block">
+              <div *ngIf="f.steam_id.errors.required">Steam ID is required</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="ingame_name" class="col-md-4 col-form-label text-md-right">Ingame Name</label>
+          <div class="col-md-6">
+            <input type="text" id="ingame_name" class="form-control" name="ingame_name" formControlName="ingame_name"
+              [ngClass]="{ 'is-invalid': submitted && f.ingame_name.errors }">
+            <div *ngIf="submitted && f.ingame_name.errors" class="invalid-feedback d-block">
+              <div *ngIf="f.ingame_name.errors.required">Ingame is required</div>
+            </div>
+          </div>
+        </div>
+        <!--
+      <div class="form-group row">
+        <label for="nid_number" class="col-md-4 col-form-label text-md-right"><abbr title="National Id Card">NID</abbr>
+          Number</label>
+        <div class="col-md-6">
+          <input type="text" id="nid_number" class="form-control" name="nid-number">
+        </div>
+      </div>
+      -->
+        <div class="col-md-6 offset-md-4">
+          <button type="submit" class="btn btn-lg btn-primary btn-block btn-register" (click)="register()">submit</button> 
+          <button class="btn btn-lg btn-primary btn-block btn-register" (click)="moveToLogin()">cancel</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

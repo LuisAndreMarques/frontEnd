@@ -1,0 +1,30 @@
+<div style="text-align:center">
+    <h1>
+      Welcome to Eurogather!
+    </h1>  
+</div>
+<form [formGroup]="loginForm">
+  <div class="container-fluid">
+    <div class="central-container">
+      <div *ngIf="invalidmessage">
+        <div class="alert-container">
+          <div class="alert alert-danger" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <strong>Attention!</strong> {{ invalidmessage }}
+          </div>
+        </div>
+      </div>
+      <div class="card card-container">
+        <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+        <p id="profile-name" class="profile-name-card"></p>
+        <input type="text" id="inputUsername" class="form-control" placeholder="username" required autofocus
+          formControlName="username">
+        <input type="password" id="inputPassword" class="form-control" placeholder="password" required formControlName="password">
+        <button class="btn btn-lg btn-primary btn-block btn-signin" (click)="login()">sign in</button>
+        <button class="btn btn-lg btn-primary btn-block btn-signin" (click)="moveToRegister()">sign up</button>
+      </div>
+    </div>
+  </div>
+</form>

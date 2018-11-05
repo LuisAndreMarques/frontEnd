@@ -1,0 +1,76 @@
+h1{
+  color:orangered;
+}
+.title{
+  text-align: left;
+}
+
+#icon{
+  background-image: url('../icons/logout_icon.png');
+  width: 16px;
+  height: 16px;
+  transition: transform .2s; /* Animation */
+  display:inline-block;
+  cursor: pointer;
+  margin-left:10px;
+}
+#icon:hover{
+  transform: scale(1.5);
+}
+#name{
+  display:inline-block;
+}
+
+.central-container {
+  background-color: #404040;
+  border: 1px solid orangered;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.right-bar {
+  background-color: grey;
+  border: 1px solid orangered;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.user-stats{
+    padding: 5px;
+}
+
+.image_outer_container {
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 50%;
+  position: relative;
+}
+
+.image_inner_container {
+  border-radius: 50%;
+  padding: 5px;
+  background: #eeeeee;
+}
+
+.image_inner_container img {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  border: 2px solid #eeeeee;
+}
+
+.image_outer_container .green_icon {
+  background-color: #4cd137;
+  position: absolute;
+  right: 30px;
+  bottom: 10px;
+  height: 30px;
+  width: 30px;
+  border: 5px solid white;
+  border-radius: 50%;
+}
+
+.username-label{
+    color:#eeeeee;
+    text-align: center
+}
